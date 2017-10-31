@@ -5,8 +5,10 @@ if not exist %ANDROID_HOME% mkdir %ANDROID_HOME%
 call :downloadfile %ANDROID_ZIP% downloads/SDK.zip
 echo "Finished downloading"
 7z x downloads\SDK.zip -o%ANDROID_HOME% 
+
 echo "Finished extracting"
-echo y |  %ANDROID_HOME%\tools\android.bat --silent update sdk --no-ui  --filter android-24,platform-tools,tools,build-tools-24.0.3
+set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
+echo y | android --silent update sdk --no-ui  --filter android-24,platform-tools,tools,build-tools-24.0.3
 echo "Running gradle"
 
 ./gradlew.bat
