@@ -10,10 +10,8 @@ echo "Finished extracting"
 set ANDROID_HOME=C:\android\android-sdk-windows
 set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 dir  %ANDROID_HOME%
-
-echo y | android --silent update sdk --no-ui  --filter build-tools-24.0.3,android-24,extra-android-m2repository
 echo "Updating liscence"
-echo y| android update sdk --no-ui
+echo y | android --silent update sdk -u -a -t 11
 echo "Running gradle"
 
 ./gradlew.bat
