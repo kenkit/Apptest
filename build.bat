@@ -1,5 +1,5 @@
 set ANDROID_HOME=C:\android
-set ANDROID_ZIP=http://dl.google.com/android/android-sdk_r22.6.2-windows.zip
+set ANDROID_ZIP=https://dl.google.com/android/repository/tools_r25.2.5-windows.zip
 if not exist downloads mkdir downloads
 if not exist %ANDROID_HOME% mkdir %ANDROID_HOME%
 if not exist   %ANDROID_ZIP% call :downloadfile %ANDROID_ZIP% downloads/SDK.zip
