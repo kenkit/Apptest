@@ -6,7 +6,7 @@ call :downloadfile %ANDROID_ZIP% downloads/SDK.zip
 echo "Finished downloading"
 7z x downloads\SDK.zip -o%ANDROID_HOME% 
 echo "Finished extracting"
-(while sleep 3; do echo "y"; done) |  %ANDROID_HOME%tools\bin>android --silent update sdk --no-ui  --filter android-24,platform-tools,tools,build-tools-24.0.3
+echo "y"|  %ANDROID_HOME%tools\bin>android --silent update sdk --no-ui  --filter android-24,platform-tools,tools,build-tools-24.0.3
 echo "Running gradle"
 ./gradlew.bat
 ./gradlew.bat assembleDebug
