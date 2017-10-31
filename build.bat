@@ -11,7 +11,7 @@ set ANDROID_HOME=C:\android\android-sdk-windows
 set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 dir  %ANDROID_HOME%
 
-echo y | android --no-ui --all --filter  android-24,platform-tools,tools,build-tools-24.0.3
+echo y | android --silent update sdk --no-ui  --filter android-24,platform-tools,tools,build-tools-24.0.3
 echo "Running gradle"
 
 ./gradlew.bat
