@@ -14,6 +14,7 @@ dir  %ANDROID_HOME%
 echo "Updating liscence"
 echo y | android --silent update sdk -u -a -t 11
 echo y | android --silent update sdk -u -a -t 41
+echo y | android --silent update sdk -u -a -t 179
 echo "Running gradle"
 
 ./gradlew.bat
