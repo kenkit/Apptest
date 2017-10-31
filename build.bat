@@ -1,4 +1,4 @@
-set ANDROID_HOME=C:\android\
+set ANDROID_HOME=C:\android
 set ANDROID_ZIP=http://dl.google.com/android/android-sdk_r22.0.5-linux.tgz
 if not exist downloads mkdir downloads
 if not exist %ANDROID_HOME% mkdir %ANDROID_HOME%
@@ -6,7 +6,7 @@ call :downloadfile %ANDROID_ZIP% downloads/SDK.zip
 echo "Finished downloading"
 7z x downloads\SDK.zip -o%ANDROID_HOME% 
 echo "Finished extracting"
-echo "y"|  %ANDROID_HOME%tools\bin>android --silent update sdk --no-ui  --filter android-24,platform-tools,tools,build-tools-24.0.3
+echo "y"|  %ANDROID_HOME%\tools\android.bat --silent update sdk --no-ui  --filter android-24,platform-tools,tools,build-tools-24.0.3
 echo "Running gradle"
 ./gradlew.bat
 ./gradlew.bat assembleDebug
