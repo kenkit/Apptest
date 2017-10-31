@@ -17,9 +17,8 @@ echo y | android --silent update sdk -u -a -t 41
 echo y | android --silent update sdk -u -a -t 179
 echo "Running gradle"
 
-call ./gradlew.bat
-echo "Building apk"
-call ./gradlew assembleDebug
+call updateproj
+call buildapk
 
 :downloadfile
 :: ----------------------------------------------------------------------
@@ -28,3 +27,16 @@ if not exist %2 (
   curl -f -L %1 -o %2 || exit 1
 )
 goto :eof
+
+
+:updateproj
+echo "Updating packages in app"
+@echo off
+./gradlew.bat
+goto:eof
+
+:buildapk
+echo "Building apk"
+@echo off
+./gradlew assembleDebug
+goto:eof
