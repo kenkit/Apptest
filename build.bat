@@ -5,7 +5,7 @@ if not exist %ANDROID_HOME% mkdir %ANDROID_HOME%
 if not exist   %ANDROID_ZIP% call :downloadfile %ANDROID_ZIP% downloads/SDK.zip
 echo "Finished downloading"
 7z  -o%ANDROID_HOME%  x downloads\SDK.zip
-
+ 
 echo "Finished extracting"
 
 set ANDROID_HOME=C:\android\android-sdk-windows
