@@ -18,9 +18,7 @@ echo y | android --silent update sdk -u -a -t 179
 echo "Running gradle"
 
 ./gradlew.bat
-
 echo "Building apk"
-
 ./gradlew.bat assembleDebug
 
 :downloadfile
