@@ -16,6 +16,7 @@ set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 dir  %ANDROID_HOME%
 echo "Updating Required components"
 echo y | android --silent update sdk -u -a -t 11
+echo y | android --silent update sdk -u -a -t 8
 echo y | android --silent update sdk -u -a -t 40
 echo y | android --silent update sdk -u -a -t 41
 echo y | android --silent update sdk -u -a -t 179
