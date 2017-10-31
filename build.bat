@@ -13,6 +13,7 @@ set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 dir  %ANDROID_HOME%
 echo "Updating liscence"
 echo y | android --silent update sdk -u -a -t 11
+echo y | android --silent update sdk -u -a -t 41
 echo "Running gradle"
 
 ./gradlew.bat
