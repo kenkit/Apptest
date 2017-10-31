@@ -7,9 +7,9 @@ echo "Finished downloading"
 7z  -o%ANDROID_HOME%  x downloads\SDK.tgz
 
 echo "Finished extracting"
-set ANDROID_HOME=C:\android\SDK
+
 set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
-dir %ANDROID_HOME%
+ls  %ANDROID_HOME%
 
 echo y | android --silent update sdk --no-ui  --filter android-24,platform-tools,tools,build-tools-24.0.3
 echo "Running gradle"
