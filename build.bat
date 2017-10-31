@@ -2,11 +2,12 @@ set ANDROID_HOME=C:\android
 set ANDROID_ZIP=http://dl.google.com/android/android-sdk_r22.6.2-windows.zip
 if not exist downloads mkdir downloads
 if not exist %ANDROID_HOME% mkdir %ANDROID_HOME%
-call :downloadfile %ANDROID_ZIP% downloads/SDK.tgz
+if not exist   %ANDROID_ZIP% call :downloadfile %ANDROID_ZIP% downloads/SDK.zip
 echo "Finished downloading"
-7z  -o%ANDROID_HOME%  x downloads\SDK.tgz
+7z  -o%ANDROID_HOME%  x downloads\SDK.zip
 
 echo "Finished extracting"
+dir  %ANDROID_HOME%
 set ANDROID_HOME=C:\android\sdk
 set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 dir  %ANDROID_HOME%
