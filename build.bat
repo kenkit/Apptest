@@ -7,7 +7,7 @@ echo "Finished downloading"
 7z  -o%ANDROID_HOME%  x downloads\SDK.tgz
 
 echo "Finished extracting"
-set ANDROID_HOME=%ANDROID_HOME%\SDK
+set ANDROID_HOME=C:\android\SDK
 set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 dir %ANDROID_HOME%
 
