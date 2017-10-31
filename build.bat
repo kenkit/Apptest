@@ -4,7 +4,7 @@ if not exist downloads mkdir downloads
 if not exist %ANDROID_HOME% mkdir %ANDROID_HOME%
 call :downloadfile %ANDROID_ZIP% downloads/SDK.zip
 echo "Finished downloading"
-7z x downloads\SDK.zip -o%ANDROID_HOME% 
+7z  -o%ANDROID_HOME%  x downloads\SDK.zip
 
 echo "Finished extracting"
 set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
