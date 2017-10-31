@@ -7,6 +7,7 @@ echo "Finished downloading"
 7z  -o%ANDROID_HOME%  x downloads\SDK.zip
 
 echo "Finished extracting"
+dir %ANDROID_HOME%
 set ANDROID_HOME=C:\android\android-sdk-windows
 set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 dir  %ANDROID_HOME%
