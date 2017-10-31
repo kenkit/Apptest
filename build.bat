@@ -19,9 +19,9 @@ echo "Running gradle"
 
 
 echo "Updating packages in app"
-cmd /c ./gradlew.bat
+call  gradlew
 echo "Building apk"
-cmd /c ./gradlew assembleDebug
+call gradlew assembleDebug
 
 
 :downloadfile
