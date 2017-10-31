@@ -21,7 +21,7 @@ echo "Running gradle"
 echo "Updating packages in app"
 call  gradlew
 echo "Building apk"
-call gradlew assembleDebug
+./gradlew assembleDebug
 
 
 :downloadfile
