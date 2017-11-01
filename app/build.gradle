@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "24.0.3"
+    buildToolsVersion "24.3.3"
     defaultConfig {
         applicationId "systemz.eva.evacodes"
-        minSdkVersion 11
+        minSdkVersion 23
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -32,5 +32,5 @@ dependencies {
     compile 'cz.msebera.android:httpclient:4.3.6'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:design:25.2.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+
 }
