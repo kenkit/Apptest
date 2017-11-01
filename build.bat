@@ -14,6 +14,9 @@ echo "Finished extracting"
 set ANDROID_HOME=C:\android\android-sdk-windows
 set PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 dir  %ANDROID_HOME%
+
+echo "Available packages"
+android list sdk --extended
 echo "Updating Required components"
 echo y | android --silent update sdk -u -a -t 11
 echo y | android --silent update sdk -u -a -t 8
