@@ -1,5 +1,6 @@
 set ANDROID_HOME=C:\android
-set ANDROID_ZIP=http://dl.google.com/android/android-sdk_r24.3.3-windows.zip   
+set ANDROID_ZIP=http://dl.google.com/android/repository/tools_r24.4.1-windows.zip  
+
     
 if not exist downloads mkdir downloads
 if not exist %ANDROID_HOME% mkdir %ANDROID_HOME%
